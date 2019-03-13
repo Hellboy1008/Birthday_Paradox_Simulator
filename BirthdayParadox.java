@@ -10,6 +10,7 @@ public class BirthdayParadox {
     private static final int PEOPLE_MAX = 70;
     private static final int TRIALS = 10000;
     private static final double PERCENT_CONVERT = 100;
+    private static final String PERCENT_SIGN = "%";
 
     public static void main(String[] args) {
         int success = 0;
@@ -26,6 +27,6 @@ public class BirthdayParadox {
             birthdates.clear();
             birthdate.clear();
         }
-        System.out.println((float) (success) / (float) (TRIALS) * PERCENT_CONVERT + "%");
+        System.out.println((float) (success) / (float) (TRIALS) * PERCENT_CONVERT + PERCENT_SIGN);
     }
 }
