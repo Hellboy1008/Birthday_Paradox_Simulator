@@ -2,7 +2,7 @@
 /**
  * Created by: 龍ONE
  * Date Created:
- * Date Edited: April 25, 2019
+ * Date Edited: April 27, 2019
  * Purpose: To test the birthday paradox, a probability theory which concerns
  *          the probability that, in a set of n randomly chosen people, some
  *          pair of them will have the same birthday.
@@ -16,7 +16,7 @@ import java.util.Random;
  * from the main method.
  */
 public class BirthdayParadox {
-    // the minumum number of people needed to reach 99.9%
+    // the minimum number of people needed to reach 99.9%
     private static final int MIN_PEOPLE = 70;
     // the number of trials for the tester
     private static final int TRIALS = 10000;
@@ -38,28 +38,41 @@ public class BirthdayParadox {
         double successfulTries = 0;
         // random object for creating random integers
         Random randomGenerator = new Random();
-        // arraylist containing the values of all the birthdays
-        ArrayList<Integer> birthdates = new ArrayList<Integer>();
+        // ArrayList containing the values of all the birthdays
+        ArrayList<Integer> birthDates = new ArrayList<Integer>();
 
         // run trials
         for (int counter = 0; counter < trials; counter++) {
             for (int personNum = 0; personNum < MIN_PEOPLE; personNum++) {
-                birthdates.add(randomGenerator.nextInt(DAYS_IN_YEAR));
+                birthDates.add(randomGenerator.nextInt(DAYS_IN_YEAR));
             }
-            // check for duplicates
-            for (int indexOne = 0; indexOne < birthdates.size() - 1; indexOne++) {
-                for (int indexTwo = indexOne + 1; indexTwo < birthdates.size(); indexTwo++) {
-                    if (birthdates.get(indexOne).equals(birthdates.get(indexTwo))) {
-                        successfulTries++;
-                        birthdates.clear();
-                    }
-                }
+            // check duplicates
+            if (checkDuplicates(birthDates)) {
+                successfulTries++;
             }
-            // reset birthdates arraylist
-            birthdates.clear();
+            // reset birthDates ArrayList
+            birthDates.clear();
         }
 
         return (successfulTries / trials) * PERCENT_CONVERT;
+    }
+
+    /**
+     * This method checks whether an ArrayList contains duplicate values
+     * 
+     * @param list The ArrayList being checked
+     * @return Whether or not duplicates exist in the list
+     */
+    private static boolean checkDuplicates(ArrayList<Integer> list) {
+        // check for duplicates
+        for (int indexOne = 0; indexOne < list.size() - 1; indexOne++) {
+            for (int indexTwo = indexOne + 1; indexTwo < list.size(); indexTwo++) {
+                if (list.get(indexOne).equals(list.get(indexTwo))) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     /**
