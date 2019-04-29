@@ -22,8 +22,10 @@ public class BirthdayParadox {
     private static final int TRIALS = 10000;
     // number of days in a year
     private static final int DAYS_IN_YEAR = 365;
+
     // multiplier for converting decimal number to percentage
     private static final double PERCENT_CONVERT = 100;
+    
     // output for the main method
     private static final String OUTPUT = "The percentage of successful trials is : %.2f%%";
 
