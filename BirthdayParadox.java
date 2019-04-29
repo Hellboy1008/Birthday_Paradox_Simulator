@@ -2,7 +2,7 @@
 /**
  * Created by: 龍ONE
  * Date Created: August 25, 2018
- * Date Edited: April 27, 2019
+ * Date Edited: April 28, 2019
  * Purpose: To test the birthday paradox, a probability theory which concerns
  *          the probability that, in a set of n randomly chosen people, some
  *          pair of them will have the same birthday.
