@@ -1,7 +1,7 @@
 
 /**
  * Created by: 龍ONE
- * Date Created:
+ * Date Created: August 25, 2018
  * Date Edited: April 27, 2019
  * Purpose: To test the birthday paradox, a probability theory which concerns
  *          the probability that, in a set of n randomly chosen people, some
