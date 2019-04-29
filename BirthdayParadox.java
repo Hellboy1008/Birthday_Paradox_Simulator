@@ -25,7 +25,7 @@ public class BirthdayParadox {
 
     // multiplier for converting decimal number to percentage
     private static final double PERCENT_CONVERT = 100;
-    
+
     // output for the main method
     private static final String OUTPUT = "The percentage of successful trials is : %.2f%%";
 
@@ -78,7 +78,7 @@ public class BirthdayParadox {
     }
 
     /**
-     * Main method that calls the tester method and prints the result to the console
+     * The main method that calls the tester method and prints the result to the console
      * 
      * @param args The arguments given to the main method
      * @return None
