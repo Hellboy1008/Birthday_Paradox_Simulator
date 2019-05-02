@@ -16,12 +16,12 @@ import java.util.Random;
  * from the main method.
  */
 public class BirthdayParadox {
+    // number of days in a year
+    private static final int DAYS_IN_YEAR = 365;
     // the minimum number of people needed to reach 99.9%
     private static final int MIN_PEOPLE = 70;
     // the number of trials for the tester
     private static final int TRIALS = 10000;
-    // number of days in a year
-    private static final int DAYS_IN_YEAR = 365;
 
     // multiplier for converting decimal number to percentage
     private static final double PERCENT_CONVERT = 100;
@@ -78,7 +78,8 @@ public class BirthdayParadox {
     }
 
     /**
-     * The main method that calls the tester method and prints the result to the console
+     * The main method that calls the tester method and prints the result to the
+     * console
      * 
      * @param args The arguments given to the main method
      * @return None
